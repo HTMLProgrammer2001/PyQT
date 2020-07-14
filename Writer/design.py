@@ -1,0 +1,150 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'design.ui'
+#
+# Created by: PyQt5 UI code generator 5.14.2
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(412, 316)
+        MainWindow.setWindowOpacity(1.0)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(0, 0, 401, 271))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.scrollArea = QtWidgets.QScrollArea(self.verticalLayoutWidget)
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setObjectName("scrollArea")
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 395, 160))
+        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+        self.label = QtWidgets.QLabel(self.scrollAreaWidgetContents)
+        self.label.setEnabled(False)
+        self.label.setGeometry(QtCore.QRect(0, 0, 391, 500))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy.setHorizontalStretch(1)
+        sizePolicy.setVerticalStretch(1)
+        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy)
+        self.label.setCursor(QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+        self.label.setStyleSheet("color: #000;\n"
+"background: #fff;")
+        self.label.setText("")
+        self.label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.label.setWordWrap(True)
+        self.label.setObjectName("label")
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+        self.verticalLayout_2.addWidget(self.scrollArea)
+        self.curSpeed = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.curSpeed.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.curSpeed.setStyleSheet("font-size: 18px;\n"
+"font-weight: 400;")
+        self.curSpeed.setScaledContents(False)
+        self.curSpeed.setAlignment(QtCore.Qt.AlignCenter)
+        self.curSpeed.setObjectName("curSpeed")
+        self.verticalLayout_2.addWidget(self.curSpeed)
+        self.mistakes = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.mistakes.setStyleSheet("font-size: 18px;\n"
+"font-weight: 400;")
+        self.mistakes.setTextFormat(QtCore.Qt.AutoText)
+        self.mistakes.setAlignment(QtCore.Qt.AlignCenter)
+        self.mistakes.setObjectName("maxSpeed")
+        self.verticalLayout_2.addWidget(self.mistakes)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
+        self.horizontalLayout.setContentsMargins(20, 10, 20, 10)
+        self.horizontalLayout.setSpacing(15)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.startButton = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.startButton.setObjectName("startButton")
+        self.horizontalLayout.addWidget(self.startButton)
+        self.stopButton = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.stopButton.setObjectName("stopButton")
+        self.horizontalLayout.addWidget(self.stopButton)
+        self.verticalLayout_2.addLayout(self.horizontalLayout)
+        self.verticalLayout.addLayout(self.verticalLayout_2)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 412, 21))
+        self.menubar.setObjectName("menubar")
+        self.menu = QtWidgets.QMenu(self.menubar)
+        self.menu.setObjectName("menu")
+        self.menu_2 = QtWidgets.QMenu(self.menubar)
+        self.menu_2.setObjectName("menu_2")
+        MainWindow.setMenuBar(self.menubar)
+        self.startAction = QtWidgets.QAction(MainWindow)
+        self.startAction.setShortcutVisibleInContextMenu(True)
+        self.startAction.setObjectName("startAction")
+        self.stopAction = QtWidgets.QAction(MainWindow)
+        self.stopAction.setShortcutVisibleInContextMenu(True)
+        self.stopAction.setObjectName("stopAction")
+        self.exitAction = QtWidgets.QAction(MainWindow)
+        self.exitAction.setShortcutVisibleInContextMenu(True)
+        self.exitAction.setObjectName("exitAction")
+
+        self.ag = QtWidgets.QActionGroup(self)
+        self.ag.setExclusive(True)
+
+        self.ua_lang = QtWidgets.QAction(MainWindow, checkable=True)
+        self.ag.addAction(self.ua_lang)
+        self.ua_lang.setChecked(True)
+        self.ua_lang.setObjectName("ua_lang")
+
+        self.ru_lang = QtWidgets.QAction(MainWindow, checkable=True)
+        self.ag.addAction(self.ru_lang)
+        self.ru_lang.setObjectName("ru_lang")
+
+        self.en_lang = QtWidgets.QAction(MainWindow, checkable=True)
+        self.ag.addAction(self.en_lang)
+        self.en_lang.setObjectName("en_lang")
+
+        self.menu.addAction(self.startAction)
+        self.menu.addAction(self.stopAction)
+        self.menu.addAction(self.exitAction)
+
+        self.menu_2.addAction(self.ua_lang)
+        self.menu_2.addAction(self.ru_lang)
+        self.menu_2.addAction(self.en_lang)
+
+        self.menubar.addAction(self.menu.menuAction())
+        self.menubar.addAction(self.menu_2.menuAction())
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Writer"))
+        self.curSpeed.setText(_translate("MainWindow", "0 зн/мин"))
+        self.mistakes.setText(_translate("MainWindow", "Ошибки: 0%"))
+        self.startButton.setText(_translate("MainWindow", "Начать"))
+        self.stopButton.setText(_translate("MainWindow", "Остановить"))
+        self.menu.setTitle(_translate("MainWindow", "Программа"))
+        self.menu_2.setTitle(_translate("MainWindow", "Язык"))
+        self.startAction.setText(_translate("MainWindow", "Начать"))
+        self.startAction.setShortcut(_translate("MainWindow", "F5"))
+        self.stopAction.setText(_translate("MainWindow", "Остановить"))
+        self.stopAction.setShortcut(_translate("MainWindow", "Esc"))
+        self.exitAction.setText(_translate("MainWindow", "Выйти"))
+        self.exitAction.setShortcut(_translate("MainWindow", "Ctrl+E"))
+        self.ua_lang.setText(_translate("MainWindow", "Украинский"))
+        self.ru_lang.setText(_translate("MainWindow", "Русский"))
+        self.en_lang.setText(_translate("MainWindow", "Английский"))
